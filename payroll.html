@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Payroll | Mini Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="Simple Payroll">
+  <main class="page">
+    <div class="split payroll-layout">
+      <form id="add-form" class="card" novalidate>
+        <h2 class="t">Add employee</h2>
+        <div><label for="name">Employee name</label><input id="name" type="text" autocomplete="off"></div>
+        <div class="grid-2">
+          <div><label for="days">Days worked</label><input id="days" type="number" inputmode="decimal" step="any" min="0"></div>
+          <div><label for="rate">Daily rate (₱)</label><input id="rate" type="number" inputmode="decimal" step="any" min="0"></div>
+        </div>
+        <div><label for="deduction">Deduction amount (₱)</label><input id="deduction" type="number" inputmode="decimal" step="any" min="0"></div>
+        <p id="add-error" class="error" role="alert"></p>
+        <button class="btn" type="submit">Add to payroll</button>
+      </form>
+
+      <section class="card list">
+        <h2 class="t">Payroll list</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>No.</th><th>Employee Name</th><th class="num">Days Worked</th><th class="num">Daily Rate</th>
+                <th class="num">Gross Pay</th><th class="num">Deduction Amount</th><th class="num">Net Pay</th>
+              </tr>
+            </thead>
+            <tbody id="payroll-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <form id="delete-form" class="card" novalidate>
+        <h2 class="t">Delete employee</h2>
+        <div><label for="line">Line number</label><input id="line" type="number" inputmode="numeric" step="1" min="1"></div>
+        <p id="delete-error" class="error" role="alert"></p>
+        <button class="btn2" type="submit">Delete line</button>
+      </form>
+    </div>
+  </main>
+  <script src="js/nav.js"></script>
+  <script src="js/payroll.js"></script>
+</body>
+</html>

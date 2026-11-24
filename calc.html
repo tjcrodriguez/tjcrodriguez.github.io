@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial, Sum, Average | Mini Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="Factorial, Sum, Average">
+  <main class="page">
+    <div class="split">
+      <form id="form" class="card" novalidate>
+        <div>
+          <label for="n">Enter N (first N natural numbers)</label>
+          <input id="n" type="number" inputmode="numeric" step="1" min="1">
+        </div>
+        <p id="error" class="error" role="alert"></p>
+        <button class="btn" type="submit">Calculate</button>
+      </form>
+      <section class="card" aria-live="polite">
+        <div class="row"><div><p class="t">Factorial</p><p class="d">While loop</p></div><output id="fact" class="big">-</output></div>
+        <hr>
+        <div class="row"><div><p class="t">Sum</p><p class="d">Do While loop</p></div><output id="sum" class="big">-</output></div>
+        <hr>
+        <div class="row"><div><p class="t">Average</p><p class="d">For loop</p></div><output id="avg" class="big">-</output></div>
+      </section>
+    </div>
+  </main>
+  <script src="js/nav.js"></script>
+  <script src="js/calc.js"></script>
+</body>
+</html>

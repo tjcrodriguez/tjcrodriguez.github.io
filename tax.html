@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax | Mini Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="Income Tax">
+  <main class="page">
+    <div class="split">
+      <div class="stack">
+        <form id="form" class="card" novalidate>
+          <div>
+            <label for="income">Taxable income (₱)</label>
+            <input id="income" type="number" inputmode="decimal" step="any" min="0">
+          </div>
+          <p id="error" class="error" role="alert"></p>
+          <button class="btn" type="submit">Compute tax</button>
+        </form>
+        <section class="card" aria-live="polite">
+          <div class="row"><p class="d">Bracket</p><span id="bracket" class="val">-</span></div>
+          <div class="row"><p class="d">Rule</p><span id="rule" class="val">-</span></div>
+          <hr>
+          <p class="d">Income tax</p>
+          <output id="tax" class="big">-</output>
+          <p id="monthly" class="d"></p>
+        </section>
+      </div>
+      <section class="card">
+        <h2 class="t">Tax table</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Over</th><th>But not over</th><th>Basic tax + rate</th></tr></thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/nav.js"></script>
+  <script src="js/tax.js"></script>
+</body>
+</html>
